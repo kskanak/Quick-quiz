@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
 
 const Topic = ({ topic }) => {
   const { id, logo, name, total } = topic;
@@ -46,7 +48,7 @@ const Topic = ({ topic }) => {
               onClick={handleStart}
               className="bg-blue-900 px-5 py-2 rounded-md  font-semibold hover:bg-blue-700 ease-linear duration-500"
             >
-              Start Quizes
+              Start Quizes <FontAwesomeIcon icon={faArrowCircleRight} />
             </Link>
           </div>
         </div>
