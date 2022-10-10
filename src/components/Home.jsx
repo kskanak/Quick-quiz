@@ -1,8 +1,13 @@
-import React from "react";
+import { useContext } from "react";
+import img from "../images/homeBanner.jpg";
+import { TopicsContext } from "../layout/Root";
+
+import Topic from "./Topic";
 
 const Home = () => {
+  const topics = useContext(TopicsContext);
   return (
-    <div>
+    <div className="bg-slate-700">
       <div className="header-top">
         <section className="bg-gray-800 text-gray-100">
           <div className="container flex flex-col-reverse mx-auto lg:flex-row">
@@ -24,11 +29,11 @@ const Home = () => {
                 </svg>
                 <div className="space-y-2">
                   <p className="text-lg font-medium leading-snug">
-                    Lorem ipsum dolor sit amet
+                    Welcome to Quick Quiz
                   </p>
                   <p className="leading-snug">
-                    Praesentium ea et neque distinctio quas eius repudiandae
-                    quaerat obcaecati voluptatem similique!
+                    Quick Quiz is a learning website with short quizes about
+                    technology.
                   </p>
                 </div>
               </div>
@@ -49,11 +54,11 @@ const Home = () => {
                 </svg>
                 <div className="space-y-2">
                   <p className="text-lg font-medium leading-snug">
-                    Lorem ipsum dolor sit amet
+                    Learn with us with fun
                   </p>
                   <p className="leading-snug">
-                    Praesentium ea et neque distinctio quas eius repudiandae
-                    quaerat obcaecati voluptatem similique!
+                    Very simple quizes, short and it offers quizs covering all
+                    aspects of web development.
                   </p>
                 </div>
               </div>
@@ -74,11 +79,11 @@ const Home = () => {
                 </svg>
                 <div className="space-y-2">
                   <p className="text-lg font-medium leading-snug">
-                    Lorem ipsum dolor sit amet
+                    Choose topics according to your choices
                   </p>
                   <p className="leading-snug">
-                    Praesentium ea et neque distinctio quas eius repudiandae
-                    quaerat obcaecati voluptatem similique!
+                    There are several topics of web development, chose yours one
+                    and start the quiz, have fun learning with Quick Quiz
                   </p>
                 </div>
               </div>
@@ -86,7 +91,7 @@ const Home = () => {
             <div className="lg:w-1/2 xl:w-3/5 dark:bg-gray-800">
               <div className="flex items-center justify-center p-4 md:p-8 lg:p-12">
                 <img
-                  src="https://source.unsplash.com/640x480/"
+                  src={img}
                   alt=""
                   className="rounded-lg shadow-lg dark:bg-gray-500 aspect-video sm:min-h-96"
                 />
@@ -94,6 +99,11 @@ const Home = () => {
             </div>
           </div>
         </section>
+      </div>
+      <div className="  topics grid md:grid-cols-2 lg:grid-cols-4 pl-10 lg:pl-5 lg:pr-4  py-10">
+        {topics.map((topic) => (
+          <Topic key={topic.id} topic={topic}></Topic>
+        ))}
       </div>
     </div>
   );

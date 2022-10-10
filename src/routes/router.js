@@ -5,16 +5,24 @@ import Topics from "../components/Topics";
 import Statistics from "../components/Statistics";
 import Blog from "../components/Blog";
 import Errorpage from "../components/Errorpage";
+import { topicsLoader } from "../topicsLoader/topicsLoader";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     errorElement: <Errorpage></Errorpage>,
     element: <Root></Root>,
+    loader: topicsLoader,
     children: [
       { path: "/", element: <Home></Home> },
-      { path: "/home", element: <Home></Home> },
-      { path: "/topics", element: <Topics></Topics> },
+      {
+        path: "/home",
+        element: <Home></Home>,
+      },
+      {
+        path: "/topics",
+        element: <Topics></Topics>,
+      },
       { path: "/statistics", element: <Statistics></Statistics> },
       { path: "/blog", element: <Blog></Blog> },
     ],
