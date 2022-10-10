@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Topic = ({ topic }) => {
   const { id, logo, name, total } = topic;
+  const handleStart=()=>{
+    toast.info(`Starting ${name} Quiz`)
+  }
   return (
     <div>
       <div className="rounded-md shadow-md sm:w-96 md:w-80  bg-gray-900 text-gray-100 my-4">
@@ -37,6 +41,7 @@ const Topic = ({ topic }) => {
           </div>
           <div className="starbtn my-5">
             <Link
+              onClick={handleStart}
               to="/"
               className="bg-blue-900 px-5 py-2 rounded-md  font-semibold hover:bg-blue-700 ease-linear duration-500"
             >
