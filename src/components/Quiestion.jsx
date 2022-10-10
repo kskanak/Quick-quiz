@@ -5,14 +5,16 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 const Quiestion = ({ quiestionSet }) => {
   const { correctAnswer, id, options, question } = quiestionSet;
-  const [first, second, third, fourth] = options;
+
   const setQuestion = question.split("<")[1].split(">")[1];
 
-  const handleSelect = (ans) => {
+  const handleSelect = (ans, e) => {
     if (ans === correctAnswer) {
       toast.success("Correct Answer");
+      e.currentTarget.classList.add("bg-green-500");
     } else {
-      console.log("not corrent");
+      toast.error("Wrong Ans");
+      e.currentTarget.classList.add("bg-red-500");
     }
   };
 
@@ -28,11 +30,13 @@ const Quiestion = ({ quiestionSet }) => {
       </button>
 
       <div className="options grid md:grid-cols-2 p-4 bg-slate-700 text-lg">
-        {options.map((option) => (
-          <button onClick={() => handleSelect(option)} key={option.id}>
-            <div className="border p-4 m-1 rounded text-white hover:bg-blue-300">
-              {option}
-            </div>
+        {options.map((option, index) => (
+          <button
+            onClick={(e) => handleSelect(option, e)}
+            key={index}
+            className="border p-4 m-1 rounded text-white hover:bg-blue-300"
+          >
+            {option}
           </button>
         ))}
       </div>
