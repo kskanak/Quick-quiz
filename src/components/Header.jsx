@@ -14,7 +14,7 @@ const Header = () => {
       <nav className="navItem text-xl md:text-2xl text-center">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-700 font-semibold" : undefined
+            isActive ? "activeClassName" : undefined
           }
           to="/home"
         >
