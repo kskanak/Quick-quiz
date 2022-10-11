@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 
-const Quiestion = ({ quiestionSet }) => {
+const Quiestion = ({ quiestionSet, correct, setCorrect, wrong, setWrong }) => {
   const { correctAnswer, id, options, question } = quiestionSet;
 
   const setQuestion = question.split("<")[1].split(">")[1];
@@ -12,8 +12,12 @@ const Quiestion = ({ quiestionSet }) => {
     if (ans === correctAnswer) {
       toast.success("Correct Answer");
       e.currentTarget.classList.add("bg-green-500");
+      const allCorrect = [...correct, ans];
+      setCorrect(allCorrect);
     } else {
       toast.error("Wrong Ans");
+      const allWrong = [...wrong, ans];
+      setWrong(allWrong);
       e.currentTarget.classList.add("bg-red-500");
     }
   };
@@ -24,8 +28,8 @@ const Quiestion = ({ quiestionSet }) => {
 
   return (
     <div className="bg-gray-500 mx-4 my-10 relative">
-      <h2 className="text-2xl p-3 ">Quiz: {setQuestion}</h2>
-      <button onClick={handleEye} className="absolute right-12 top-4">
+      <h2 className="text-xl p-3 ">Quiz: {setQuestion}</h2>
+      <button onClick={handleEye} className="md:absolute right-12 top-2">
         <FontAwesomeIcon icon={faEye} />
       </button>
 
@@ -34,7 +38,7 @@ const Quiestion = ({ quiestionSet }) => {
           <button
             onClick={(e) => handleSelect(option, e)}
             key={index}
-            className="border p-4 m-1 rounded text-white hover:bg-blue-300"
+            className="border p-4 m-1 rounded text-white hover:bg-emerald-500"
           >
             {option}
           </button>
