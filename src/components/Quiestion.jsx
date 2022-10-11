@@ -34,7 +34,7 @@ const Quiestion = ({ quiestionSet, correct, setCorrect, wrong, setWrong }) => {
       <button
         onClick={handleEye}
         title="Correct Ans"
-        className="absolute right-12 top-12 "
+        className="md:absolute right-12 top-12 my-2 md:my-2"
       >
         <FontAwesomeIcon icon={faEye} />
       </button>
