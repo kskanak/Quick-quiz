@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { TopicsContext } from "../layout/Root";
-import "./Statistics/Statistics.css";
+
 import {
   AreaChart,
   Area,

@@ -6,12 +6,12 @@ const Header = () => {
   return (
     <div className="header md:flex justify-between items-center px-24 py-5 bg-slate-700 text-white">
       <Link to="/">
-        <div className="title text-xl md:text-2xl font-semibold my-2 md:my-2 text-center">
+        <div className="title text-xl  font-semibold my-2 md:my-2 text-center">
           Quick Quiz
         </div>
       </Link>
 
-      <nav className="navItem text-xl md:text-2xl text-center">
+      <nav className="navItem text-xl  text-center">
         <NavLink
           className={({ isActive }) =>
             isActive ? "activeClassName" : undefined
