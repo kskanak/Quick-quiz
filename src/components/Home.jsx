@@ -29,11 +29,18 @@ const Home = () => {
                 </svg>
                 <div className="space-y-2">
                   <p className="text-lg font-medium leading-snug">
-                    Welcome to Quick Quiz
+                    Welcome to{" "}
+                    <span className="text-sky-400 mx-1 font-semibold">
+                      Quick
+                    </span>
+                    <span className="text-green-400 font-semibold">Quiz</span>
                   </p>
                   <p className="leading-snug">
-                    Quick Quiz is a learning website with short quizes about
-                    technology.
+                    <span className="text-sky-400  mx-1 font-semibold">
+                      Quick
+                    </span>
+                    <span className="text-green-400 font-semibold">Quiz</span>{" "}
+                    is a learning website with short quizes about technology.
                   </p>
                 </div>
               </div>
@@ -83,7 +90,11 @@ const Home = () => {
                   </p>
                   <p className="leading-snug">
                     There are several topics of web development, chose yours one
-                    and start the quiz, have fun learning with Quick Quiz
+                    and start the quiz, have fun learning with{" "}
+                    <span className="text-sky-400 mx-1 font-semibold">
+                      Quick
+                    </span>
+                    <span className="text-green-400 font-semibold">Quiz</span>
                   </p>
                 </div>
               </div>

@@ -8,7 +8,7 @@ const Quiz = () => {
   const { id, name, logo, questions } = quizData;
   const [correct, setCorrect] = useState([]);
   const [wrong, setWrong] = useState([]);
-  console.log(correct, wrong);
+
   return (
     <div className="text-center py-4 text-3xl font-semibold bg-gray-400 px-3">
       <h2>Welcome to {name} Quiz</h2>
@@ -31,7 +31,7 @@ const Quiz = () => {
         </div>
         {/* Quiz result shows */}
 
-        <div className="quiz-result bg-slate-900 order-first md:order-last md:h-screen mt-10 rounded py-5">
+        <div className="quiz-result bg-slate-900 order-first md:order-last md:h-screen mt-10 rounded py-5 mx-5 shadow-lg shadow-green-300">
           <div className="correctAnsShow">
             <h2 className="text-green-600 my-2 ">
               Correct Ans
@@ -39,8 +39,10 @@ const Quiz = () => {
                 {correct.length}
               </span>
             </h2>
-            {correct.map((correctAns) => (
-              <li className="text-green-600 text-sm">{correctAns}</li>
+            {correct.map((correctAns, index) => (
+              <li key={index} className="text-green-600 text-sm">
+                {correctAns}
+              </li>
             ))}
           </div>
 
@@ -51,8 +53,10 @@ const Quiz = () => {
                 {wrong.length}
               </span>
             </h2>
-            {wrong.map((wrongAns) => (
-              <li className="text-red-600 text-sm">{wrongAns}</li>
+            {wrong.map((wrongAns, index) => (
+              <li key={index} className="text-red-600 text-sm">
+                {wrongAns}
+              </li>
             ))}
           </div>
         </div>

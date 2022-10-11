@@ -28,11 +28,13 @@ const Quiestion = ({ quiestionSet, correct, setCorrect, wrong, setWrong }) => {
 
   return (
     <div className="bg-gray-500 mx-4 my-10 relative shadow-sky-400 shadow-lg  rounded-lg ">
-      <h2 className="text-xl p-3 w-4/5">Quiz: {setQuestion}</h2>
+      <h2 className="text-xl p-3 w-4/5 h-32">
+        <span className="font-bold">Quiz</span> : {setQuestion}
+      </h2>
       <button
         onClick={handleEye}
         title="Correct Ans"
-        className="absolute right-12 top-7 md:top-3 flex "
+        className="absolute right-12 top-12 "
       >
         <FontAwesomeIcon icon={faEye} />
       </button>
