@@ -12,7 +12,7 @@ const Topic = ({ topic }) => {
   };
   return (
     <div>
-      <div className="rounded-xl shadow-md w-72 mx-auto md:w-80  bg-gray-900 text-gray-100 my-4">
+      <div className="rounded-xl shadow-md w-96 mx-auto md:w-80  bg-gray-900 text-gray-100 my-4">
         <div className="flex items-center justify-between p-3 bg-slate-500 rounded-t-lg mb-4">
           <div className="flex items-center space-x-2">
             <h2 className="text-xl">{name}</h2>

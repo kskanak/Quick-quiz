@@ -111,7 +111,7 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <div className="  topics grid md:grid-cols-2 lg:grid-cols-4 pl-10 lg:pl-5 lg:pr-4  py-10">
+      <div className=" topics grid md:grid-cols-2 lg:grid-cols-3  lg:pl-5 lg:pr-4  py-10">
         {topics.map((topic) => (
           <Topic key={topic.id} topic={topic}></Topic>
         ))}

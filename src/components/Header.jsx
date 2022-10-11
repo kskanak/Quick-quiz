@@ -4,7 +4,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="header md:flex justify-between items-center px-24 py-5 bg-slate-700 text-white">
+    <div className="header md:flex justify-between items-center px-24 py-5 bg-slate-900 text-white">
       <Link to="/">
         <h2 className="title text-2xl text-sky-400 font-semibold my-2 md:my-2 text-center">
           Quick <span className="text-green-400">Quiz</span>
