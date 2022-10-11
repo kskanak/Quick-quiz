@@ -11,7 +11,7 @@ const Header = () => {
         </h2>
       </Link>
 
-      <nav className="navItem text-xl  text-center">
+      <nav className="navItem text-xl  flex justify-center">
         <NavLink
           className={({ isActive }) =>
             isActive ? "activeClassName" : undefined
