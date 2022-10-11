@@ -27,13 +27,17 @@ const Quiestion = ({ quiestionSet, correct, setCorrect, wrong, setWrong }) => {
   };
 
   return (
-    <div className="bg-gray-500 mx-4 my-10 relative">
-      <h2 className="text-xl p-3 ">Quiz: {setQuestion}</h2>
-      <button onClick={handleEye} className="md:absolute right-12 top-2">
+    <div className="bg-gray-500 mx-4 my-10 relative shadow-sky-400 shadow-lg  rounded-lg ">
+      <h2 className="text-xl p-3 w-4/5">Quiz: {setQuestion}</h2>
+      <button
+        onClick={handleEye}
+        title="Correct Ans"
+        className="absolute right-12 top-7 md:top-3 flex "
+      >
         <FontAwesomeIcon icon={faEye} />
       </button>
 
-      <div className="options grid md:grid-cols-2 p-4 bg-slate-700 text-lg">
+      <div className="options grid md:grid-cols-2 p-4 bg-slate-700 text-lg rounded-lg">
         {options.map((option, index) => (
           <button
             onClick={(e) => handleSelect(option, e)}

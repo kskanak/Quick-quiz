@@ -48,7 +48,7 @@ const Quiz = () => {
             <h2 className="text-red-300 my-2 ">
               Wrong Ans
               <span className=" border px-2 bg-red-600 rounded text-lg text-white mx-2">
-                {correct.length}
+                {wrong.length}
               </span>
             </h2>
             {wrong.map((wrongAns) => (

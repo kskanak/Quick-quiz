@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className="bg-slate-800">
+    <div className="bg-slate-600">
       <div className="blogs-container py-10">
         <div className="container flex flex-col w-4/5 p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 text-gray-100">
           <div className="flex justify-between p-4">
@@ -45,7 +45,7 @@ const Blog = () => {
         <div className="container flex flex-col w-4/5 p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 text-gray-100">
           <div className="flex justify-between p-4">
             <div className="flex space-x-4">
-              <h4 className="font-bold">?useRef Hook</h4>
+              <h4 className="font-bold">useRef Hook ?</h4>
             </div>
           </div>
           <div className="p-4 space-y-2 text-sm dark:text-gray-400">

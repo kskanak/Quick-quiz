@@ -13,7 +13,7 @@ const Topic = ({ topic }) => {
   return (
     <div>
       <div className="rounded-md shadow-md sm:w-96 md:w-80  bg-gray-900 text-gray-100 my-4">
-        <div className="flex items-center justify-between p-3">
+        <div className="flex items-center justify-between p-3 bg-slate-500 rounded-t-lg mb-4">
           <div className="flex items-center space-x-2">
             <h2 className="text-xl">{name}</h2>
           </div>
@@ -33,10 +33,10 @@ const Topic = ({ topic }) => {
           <img
             src={logo}
             alt=""
-            className="object-center h-72 dark:bg-gray-500"
+            className="object-cover mb-4 h-52 dark:bg-gray-500"
           />
         </div>
-        <div className="p-3">
+        <div className="p-3 bg-slate-400 rounded-b-lg">
           <div className="space-y-3">
             <p className="text-sm">
               <span className="text-base font-semibold"> Quizes : {total}</span>
