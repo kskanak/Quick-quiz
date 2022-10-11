@@ -38,6 +38,20 @@ const Blog = () => {
               state to its children. It will hold the "store" and be the parent
               of all the components that might need that store. Consumer as it
               so happens is a component that consumes and uses the state.
+              <h2>There are four steps to using React context:</h2>
+              <p>1.Create context using the createContext method. </p>
+              <p>
+                2. Take your created context and wrap the context provider
+                around your component tree.
+              </p>
+              <p>
+                3.Put any value you like on your context provider using the
+                value prop.
+              </p>
+              <p>
+                4.Read that value within any component by using the context
+                consumer.
+              </p>
             </p>
           </div>
         </div>
@@ -55,6 +69,18 @@ const Blog = () => {
               persisted mutable values. This reference, or ref for short,
               contains the value which can be retrieved using the current
               property.
+              <p>
+                ReactJS being a modern frontend library took it further by
+                providing a Ref API to access its element, and even a step
+                further through the useRef hook for a functional component.
+              </p>
+              <p>
+                A unique way to implement a useRef hook is to use it to store
+                values instead of DOM references. These values can either be a
+                state that does not need to change too often or a state that
+                should change as frequently as possible but should not trigger
+                full re-rendering of the component.
+              </p>
             </p>
           </div>
         </div>
